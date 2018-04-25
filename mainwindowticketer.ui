@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowTicketer</class>
+ <widget class="QMainWindow" name="MainWindowTicketer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>788</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/img/img/ticket2.ICO</normaloff>:/img/img/ticket2.ICO</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Ticket</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="labelCurDateTime">
+          <property name="styleSheet">
+           <string notr="true">font: 18pt &quot;.SF NS Text&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="groupBoxInfoPassenger">
+              <property name="title">
+               <string>Info Passager</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Nom:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="lineEditPassengerName"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Type Passager:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QRadioButton" name="radioButtonPassengerTypeH">
+                   <property name="text">
+                    <string>Homme</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButtonPassengerTypeF">
+                   <property name="text">
+                    <string>Femme</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButtonPassengerTypeC">
+                   <property name="text">
+                    <string>Enfant</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Telephone</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="lineEditPassengerPhone"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxInfoTicket">
+              <property name="title">
+               <string>Info Ticket</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Origine:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="comboBoxOrigine"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Destination:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="comboBoxDest"/>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="styleSheet">
+                  <string notr="true">visibility:hidden</string>
+                 </property>
+                 <property name="text">
+                  <string>Date:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDateEdit" name="dateEditTicketDate"/>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Heure:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QTimeEdit" name="timeEditTicketTime"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>Prix (Fc):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QLabel" name="labelRoutePrice">
+                 <property name="styleSheet">
+                  <string notr="true">font: 18pt &quot;.SF NS Text&quot; bold;
+font-weight:bold;
+color: rgb(61, 212, 189) ;</string>
+                 </property>
+                 <property name="text">
+                  <string>0.00</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="labelRouteStatus">
+                 <property name="styleSheet">
+                  <string notr="true">font: 9pt &quot;.SF NS Text&quot;;
+color: rgb(255, 0, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le trajet &amp;lt;strong&amp;gt;Lubumbashi&amp;lt;/strong&amp;gt; - &amp;lt;strong&amp;gt;Likasi&amp;lt;/string&amp;gt; n'existe pas.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxEmail">
+              <property name="title">
+               <string>Email</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Address:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditTicketEmail">
+                   <property name="placeholderText">
+                    <string>steve@apple.com</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QPushButton" name="pushButtonNewTicket">
+                <property name="text">
+                 <string>Nouveau Ticket</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normalon>:/img/img/ticket2.ICO</normalon>
+                 </iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonSellTicket">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="text">
+                 <string>Confirmer</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normalon>:/img/img/check.png</normalon>
+                 </iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QGroupBox" name="groupBoxMessageBoard">
+              <property name="minimumSize">
+               <size>
+                <width>334</width>
+                <height>285</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Messageries avec l'admin</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QTextEdit" name="textEditMsgBoard">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QLineEdit" name="lineEditTicketerText"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSendMsgToAdmin">
+                   <property name="text">
+                    <string>Envoyer</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/img/img/msg_send.png</normalon>
+                    </iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxTicketDetails">
+              <property name="title">
+               <string>Details Ticket</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QTextEdit" name="textEdit">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>180</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Panel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QPushButton" name="pushButtonPrintTicket">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>Imprimer Ticket</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/img/img/printer.png</normalon>
+                    </iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/img/img/report.png</normaloff>:/img/img/report.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Rapport</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string>Recherche Ticket</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Rechercher:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditTicketSearch"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableViewSellsReport"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Annuler Ticker</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>881</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionNouveau_Ticket"/>
+    <addaction name="actionImprimer_Rapport"/>
+    <addaction name="separator"/>
+    <addaction name="actionDeconnexion"/>
+   </widget>
+   <addaction name="menuFichier"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNouveau_Ticket"/>
+   <addaction name="actionImprimer_Rapport"/>
+   <addaction name="separator"/>
+   <addaction name="actionDeconnexion"/>
+  </widget>
+  <action name="actionDeconnexion">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/img/logout.png</normaloff>:/img/img/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deconnexion</string>
+   </property>
+  </action>
+  <action name="actionR_de_vente">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/img/report.png</normaloff>:/img/img/report.png</iconset>
+   </property>
+   <property name="text">
+    <string>R. de vente</string>
+   </property>
+  </action>
+  <action name="actionImprimer_Rapport">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/img/printer.png</normaloff>:/img/img/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimer Rapport</string>
+   </property>
+  </action>
+  <action name="actionNouveau_Ticket">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/img/ticket2.ICO</normaloff>:/img/img/ticket2.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau Ticket</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

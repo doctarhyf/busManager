@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/about.png</file>
+        <file>img/station.png</file>
+        <file>img/ticketeur.ico</file>
+        <file>img/trajet.png</file>
+        <file>img/ticketeur_photo.jpg</file>
+        <file>img/bus.jpeg</file>
+        <file>img/bus1.png</file>
+        <file>img/logout.png</file>
+        <file>img/routes.png</file>
+        <file>img/bus2.jpeg</file>
+        <file>img/ticket.png</file>
+        <file>img/printer.png</file>
+        <file>img/report.png</file>
+        <file>img/logout2.PNG</file>
+        <file>img/ticket2.ICO</file>
+        <file>img/check.png</file>
+        <file>img/edit.png</file>
+        <file>img/login.png</file>
+        <file>img/bus3.jpg</file>
+        <file>img/tkt_logo.jpg</file>
+        <file>img/bs_spl.png</file>
+        <file>img/msg_send.png</file>
+        <file>img/add.png</file>
+        <file>img/del.png</file>
+    </qresource>
+    <qresource prefix="/audio">
+        <file>audio/intro.mp3</file>
+    </qresource>
+</RCC>
